@@ -7,16 +7,22 @@ import static org.junit.Assert.assertEquals;
 
 public class IngredientTest {
 
+    IngredientType  ingredientType;
     Ingredient ingredient;
+    String name;
+    float price;
 
     @Before
     public void setUp() {
-        ingredient = new Ingredient(IngredientType.SAUCE, "Мазик", 12.15f);
+        name = "Майонез";
+        ingredientType = IngredientType.SAUCE;
+        price = 12.15f;
+        ingredient = new Ingredient(ingredientType, name, price);
     }
 
     @Test
     public void whenCallGetPriceThenReturnFloatTest() {
-        float expect = 12.15f;
+        float expect = price;
 
         float actual = ingredient.getPrice();
 
@@ -25,7 +31,7 @@ public class IngredientTest {
 
     @Test
     public void whenCallGetNameThenReturnStringTest() {
-        String expect = "Мазик";
+        String expect = name;
 
         String actual = ingredient.getName();
 
@@ -34,7 +40,7 @@ public class IngredientTest {
 
     @Test
     public void whenCallGetTypeThenReturnIngredientTypeTest() {
-        IngredientType expect = IngredientType.SAUCE;
+        IngredientType expect = ingredientType;
 
         IngredientType actual = ingredient.getType();
 
