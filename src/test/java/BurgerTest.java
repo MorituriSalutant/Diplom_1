@@ -1,4 +1,3 @@
-import org.hamcrest.MatcherAssert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,8 +9,6 @@ import praktikum.Burger;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
 
-import static org.hamcrest.CoreMatchers.allOf;
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -77,24 +74,5 @@ public class BurgerTest {
         float actual = burger.getPrice();
 
         assertEquals(expect, actual, 0);
-    }
-
-    @Test
-    public void whenCallGetReceiptThenReturnString() {
-        Mockito.when(bun.getName()).thenReturn("black bun");
-        Mockito.when(ingredient.getType()).thenReturn(IngredientType.FILLING);
-        Mockito.when(ingredient.getName()).thenReturn("hot sauce");
-        burger.setBuns(bun);
-        burger.addIngredient(ingredient);
-        String expectBun = "black bun";
-        String expectSauce = "hot sauce";
-        String expectFilling = "filling";
-
-        String actual = burger.getReceipt();
-
-        MatcherAssert.assertThat(actual, allOf(
-                containsString(expectBun),
-                containsString(expectSauce),
-                containsString(expectFilling)));
     }
 }

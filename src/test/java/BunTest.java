@@ -7,15 +7,19 @@ import static org.junit.Assert.assertEquals;
 public class BunTest {
 
     Bun bun;
+    String name;
+    float price;
 
     @Before
     public void setUp() {
-        bun = new Bun("Хлеб", 123.45f);
+        name = "Хлеб";
+        price = 123.45f;
+        bun = new Bun(name,price);
     }
 
     @Test
     public void whenCallGetNameThenReturnStringTest() {
-        String expect = "Хлеб";
+        String expect = name;
 
         String actual = bun.getName();
 
@@ -24,7 +28,7 @@ public class BunTest {
 
     @Test
     public void whenCallGetPriceThenReturnFloatTest() {
-        float expect = 123.45f;
+        float expect = price;
 
         float actual = bun.getPrice();
 

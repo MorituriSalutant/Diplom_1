@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class IngredientTest {
 
-    IngredientType  ingredientType;
+    IngredientType ingredientType;
     Ingredient ingredient;
     String name;
     float price;
