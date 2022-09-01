@@ -19,19 +19,19 @@ public class BunTest {
 
     @Test
     public void whenCallGetNameThenReturnStringTest() {
-        String expect = name;
+        String expected = name;
 
         String actual = bun.getName();
 
-        assertEquals(expect, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void whenCallGetPriceThenReturnFloatTest() {
-        float expect = price;
+        float expected = price;
 
         float actual = bun.getPrice();
 
-        assertEquals(expect, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 }

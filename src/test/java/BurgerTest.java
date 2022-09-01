@@ -69,10 +69,10 @@ public class BurgerTest {
         Mockito.when(ingredient.getPrice()).thenReturn(10f);
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
-        float expect = 30f;
+        float expected = 30f;
 
         float actual = burger.getPrice();
 
-        assertEquals(expect, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 }

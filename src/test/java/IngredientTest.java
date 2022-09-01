@@ -22,28 +22,28 @@ public class IngredientTest {
 
     @Test
     public void whenCallGetPriceThenReturnFloatTest() {
-        float expect = price;
+        float expected = price;
 
         float actual = ingredient.getPrice();
 
-        assertEquals(expect, actual, 0);
+        assertEquals(expected, actual, 0);
     }
 
     @Test
     public void whenCallGetNameThenReturnStringTest() {
-        String expect = name;
+        String expected = name;
 
         String actual = ingredient.getName();
 
-        assertEquals(expect, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void whenCallGetTypeThenReturnIngredientTypeTest() {
-        IngredientType expect = ingredientType;
+        IngredientType expected = ingredientType;
 
         IngredientType actual = ingredient.getType();
 
-        assertEquals(expect, actual);
+        assertEquals(expected, actual);
     }
 }
